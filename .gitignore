@@ -1,18 +1,37 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Secrets and keys (never commit)
+.env
+.env.*
+!.env.example
+keys.ini
+*.key
+*.pem
+secrets.*
 
-# Other files and folders
-.settings/
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Node
+node_modules/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Scratch, downloads and run output
+tmp/
+scratch/
+*.log
+*.tmp
+.cache/
+
+# Raw downloaded source PDFs and text extracts (cite them in SOURCES.md instead)
+sources-raw/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
