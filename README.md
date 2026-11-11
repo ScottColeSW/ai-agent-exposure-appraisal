@@ -34,7 +34,7 @@ Ask each question of your own environment first. The answers below are what was 
 | Question | What we measured | What held | What it cost | Caveat |
 |---|---|---|---|---|
 | What does your agent read that someone else wrote, and what may it do about it? | With no control, planted text became actions in 62 of 120 cases. | Request binding with approval holds: 0 of 120. | 61 of 63 valid tasks completed. | The valid tasks are the author's and tidier than real work. |
-| Where is a person in the loop, and what do they see? | A reviewer shown the agent's own reason let 40% of non-matching requests through. | The system's comparison with the operator's words shown first: 6%. | Not measured. | Small-model reviewers. A study with people is built and waiting for participants. |
+| Where is a person in the loop, and what do they see? | A reviewer shown the agent's own reason let 40% of non-matching requests through. | The system's comparison with the operator's words shown first: 6%. | Not measured. | Small-model reviewers. A first round of five people approved 54% of non-matching requests under the agent's own reason and 26% with the comparison first, but they took it together with the cards read aloud, so it is a pilot. |
 
 ## CTO
 
@@ -62,7 +62,7 @@ Ask each question of your own environment first. The answers below are what was 
 | Question | What we measured | What held | What it cost | Caveat |
 |---|---|---|---|---|
 | Can you show a prediction came before the result, and the log was not edited? | Each preregistered live run refuses to start unless its prediction is committed and unedited. The no-defense rate in the blind round came in at 75% against a predicted 52%, and the miss is reported. | A hash-chained decision log that can be verified after the fact. | Not measured. | A hash chain detects tampering. It does not prevent it. Method, not a guarantee. |
-| What could not be tested? | Independent red teams, larger models, real tool catalogs, production telemetry, people reviewing approvals. | | | The list is the author's own. |
+| What could not be tested? | Independent red teams, larger models, real tool catalogs, production telemetry, a larger study of people reviewing approvals (five-person pilot only). | | | The list is the author's own. |
 
 ## Board
 
