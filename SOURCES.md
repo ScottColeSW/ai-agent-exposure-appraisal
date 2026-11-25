@@ -86,10 +86,31 @@ traced to the papers above, and one was found misleading (the LlamaFirewall util
 Other numbers on that page were **not** checked and are not used here: Gartner adoption forecasts,
 vendor survey percentages, and the incident statistics.
 
+## Post-quantum cryptography manual
+
+Sources for the [migration manual](docs/pdf/Post-Quantum-Cryptography-Migration-Manual.pdf). The status
+of each is carried over from the manual's own "Facts status and sources" section, checked 2026-10-22.
+
+| Used for | Source | How far checked |
+|---|---|---|
+| ML-KEM, published and effective 13 August 2024 | [FIPS 203](https://csrc.nist.gov/pubs/fips/203/final) | Primary, read in an earlier session |
+| ML-DSA, same date | [FIPS 204](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf) | Primary |
+| SLH-DSA, same date | [FIPS 205](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf) | Primary |
+| IR 8547 is still an initial public draft | [NIST draft page](https://csrc.nist.gov/pubs/ir/8547/ipd) | Primary |
+| Where to find current guidance | [NIST PQC project page](https://csrc.nist.gov/projects/post-quantum-cryptography) | Primary |
+| AES at 128, 192 or 256 bits can continue to be used | [NIST PQC FAQ](https://csrc.nist.gov/Projects/post-quantum-cryptography/faqs) | Primary |
+| SP 800-63B-4 is final (31 July 2025), salted and hashed passwords with a cost factor | [Status page](https://csrc.nist.gov/pubs/sp/800/63/b/4/final), [text](https://pages.nist.gov/800-63-4/sp800-63b.html) | Primary |
+| Firefox offers hybrid X25519 + ML-KEM-768 by default | [Mozilla enterprise policy reference](https://mozilla.github.io/enterprise-admin-reference/reference/policies/postquantumkeyagreementenabled/) | Primary |
+| Chrome enabled ML-KEM by default on all platforms (4 December 2024) | [Chromium commit](https://chromium.googlesource.com/chromium/src/+/ed1a8b05afa0cd16e9aa7e7c9b64041f8575f463) | Primary, commit message |
+| WebAuthn lists ES256, RS256 and EdDSA | [Yubico developer guide](https://developers.yubico.com/WebAuthn/WebAuthn_Developer_Guide/Algorithms.html) | Secondary, one vendor guide |
+| A proposal for ML-DSA in WebAuthn | [draft-vitap-ml-dsa-webauthn-04](https://www.ietf.org/archive/id/draft-vitap-ml-dsa-webauthn-04.txt) | Primary. Its stated expiry, 24 September 2026, is earlier than the check date |
+| Argon2id (opened, then left out of the manual) | [RFC 9106](https://www.rfc-editor.org/rfc/rfc9106), [OWASP cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) | Not used |
+
 ## Measurements from this author
 
 All "what we measured" figures in the README come from the sibling project
 [Agent Defense Theater](https://github.com/ScottColeSW/Agent-Defense-Theater), mainly its
-`docs/ROLE-QUESTIONS.md` and `docs/CHECKLIST.md`, and from
-[Aegis Vector](https://github.com/ScottColeSW/Project-Aegis-Vector). They use simulated targets, local
+[`docs/ROLE-QUESTIONS.md`](https://github.com/ScottColeSW/Agent-Defense-Theater/blob/main/docs/ROLE-QUESTIONS.md)
+and [`docs/CHECKLIST.md`](https://github.com/ScottColeSW/Agent-Defense-Theater/blob/main/docs/CHECKLIST.md),
+and from [Aegis Vector](https://github.com/ScottColeSW/Project-Aegis-Vector). They use simulated targets, local
 models of 8B parameters or smaller, and attacks written by the author or by two Google models.
