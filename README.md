@@ -1,5 +1,8 @@
 # ai-agent-exposure-appraisal
 
+[![License](https://img.shields.io/github/license/ScottColeSW/ai-agent-exposure-appraisal)](LICENSE)
+[![Latest Release](https://img.shields.io/github/v/release/ScottColeSW/ai-agent-exposure-appraisal)](https://github.com/ScottColeSW/ai-agent-exposure-appraisal/releases/latest)
+
 **Risk vs. confidence for AI agents, by the executive who owns the answer.**
 
 Most AI security claims show a defense blocking an attack. Few show what the defense cost in work that
@@ -76,6 +79,26 @@ Meta's LlamaFirewall cut attacks on one benchmark from 17.6% to 1.75% and **lowe
 47.7% to 42.7%**. Microsoft's spotlighting work cut attacks from about 50% to under 3% on GPT-family
 models, which are not the small open-weight models tested here. Details and links are in
 [SOURCES.md](SOURCES.md).
+
+## Also here: post-quantum cryptography migration
+
+Agents hold service identities, tokens and signing keys, and each one belongs on a cryptography
+inventory. [**Post-Quantum Cryptography Migration Manual: Seven Steps for Leaders**](docs/pdf/Post-Quantum-Cryptography-Migration-Manual.pdf)
+(PDF, working draft, facts checked 2026-10-22) walks through the owner, the inventory, the vendors, the
+agent credentials and the logins, with a checklist. It marks what is judgment and how far each fact was
+checked. Its sources are listed in [SOURCES.md](SOURCES.md#post-quantum-cryptography-manual).
+
+## Related projects
+
+- [Agent Defense Theater](https://github.com/ScottColeSW/Agent-Defense-Theater): the range that attacks
+  local models through agent tool protocols and scores each defense by attacks stopped and legitimate
+  work kept.
+- [Aegis Vector](https://github.com/ScottColeSW/Project-Aegis-Vector): forged documents in a local RAG
+  pipeline, measured defense by defense.
+- [Palimpsest](https://github.com/ScottColeSW/Palimpsest): the curated agent memory that Aegis Vector
+  uses as its memory gate.
+- [Flatline Ledger](https://github.com/ScottColeSW/Flatline-Ledger): the same paired scoring applied to
+  classic penetration testing against local lab targets.
 
 ## Books for the people who sign off
 
